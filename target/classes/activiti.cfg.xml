@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+ 
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+ 
+    <bean id="processEngineConfiguration" class="org.activiti.engine.impl.cfg.StandaloneProcessEngineConfiguration">
+
+        <property name="jdbcUrl" value="jdbc:oracle:thin:@114.215.30.227:1521:orcl"/>
+
+        <property name="jdbcDriver" value="oracle.jdbc.driver.OracleDriver"/>
+
+        <property name="jdbcUsername" value="Software"/>
+
+        <property name="jdbcPassword" value="Zhoushanshan1988"/>
+
+        <!-- 自动构建数据库表，设置value="true"，第一次启动建表；设置value="drop-create"，每次启动时建新表-> -->
+        <property name="databaseSchemaUpdate" value="true" />
+       <!--  <property name="databaseSchema" value="ACTIVITI"/> -->
+    </bean>
+
+</beans>
